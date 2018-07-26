@@ -6,7 +6,7 @@ target 'Beacon' do
   use_frameworks!
 
   # Pods for Beacon
-	pod 'EstimoteProximitySDK'
+	pod 'EstimoteIndoorSDK'
 
   target 'BeaconTests' do
     inherit! :search_paths
