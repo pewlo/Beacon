@@ -8,11 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
 
+    let locationManager = EILIndoorLocationManager()
+    var location: EILLocation!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "my-kitchen")
+        fetchLocationRequest.sendRequest { (location, error) in
+            if location != nil {
+                self.location = location!
+            } else {
+                print("can't fetch location: \(error)")
+            }
+        }
         
     }
 
