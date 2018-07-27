@@ -10,45 +10,15 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, EILBackgroundIndoorLocationManagerDelegate  {
+class AppDelegate: UIResponder, UIApplicationDelegate, EILIndoorLocationManagerDelegate  {
 
     var window: UIWindow?
-    
-    let backgroundIndoorManager = EILBackgroundIndoorLocationManager()
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        ESTConfig.setupAppID("<#App ID#>", andAppToken: "<#App Token#>")
-        
-        self.backgroundIndoorManager.delegate = self
-        self.backgroundIndoorManager.requestAlwaysAuthorization()
-        
-        let fetchLocation = EILRequestFetchLocation(locationIdentifier: "my-kitchen")
-        fetchLocation.sendRequest { (location, error) in
-            if let location = location {
-                self.backgroundIndoorManager.startPositionUpdates(for: location)
-            } else {
-                print("can't fetch location: \(error)")
-            }
-        }
         
         return true
     }
     
-    func backgroundIndoorLocationManager(
-        _ locationManager: EILBackgroundIndoorLocationManager,
-        didFailToUpdatePositionWithError error: Error) {
-        print("failed to update position: \(error)")
-    }
-    
-    func backgroundIndoorLocationManager(
-        _ manager: EILBackgroundIndoorLocationManager,
-        didUpdatePosition position: EILOrientedPoint,
-        with positionAccuracy: EILPositionAccuracy,
-        in location: EILLocation) {
-
-    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -8,15 +8,21 @@
 
 import UIKit
 
+
 class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
 
+    @IBOutlet weak var locationView: EILIndoorLocationView!
+    
     let locationManager = EILIndoorLocationManager()
     var location: EILLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
+        ESTConfig.setupAppID("<App ID>", andAppToken: "<App Token>")
 
-        let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "my-kitchen")
+        let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "beacons room")
         fetchLocationRequest.sendRequest { (location, error) in
             if location != nil {
                 self.location = location!
@@ -25,6 +31,12 @@ class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
             }
         }
         
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        locationManager.stopPositionUpdates()
     }
 
 }
