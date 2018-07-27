@@ -121,6 +121,13 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVl-g2-pNS">
                                 <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="baM-nq-dME">
+                                        <rect key="frame" x="8" y="182" width="359" height="298"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 Floor" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaa-9h-pJv">
@@ -136,6 +143,9 @@
                                     <constraint firstAttribute="height" constant="80" id="WPd-Wk-wez"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="menuButtonTapped:" destination="X7i-iY-uVR" eventType="touchUpInside" id="TXL-tC-yWH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -153,6 +163,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z58-4J-Xlt"/>
                     </view>
+                    <connections>
+                        <outlet property="menuButton" destination="FoU-q5-mJn" id="Gyx-wp-hHF"/>
+                        <outlet property="menuTableView" destination="baM-nq-dME" id="M3i-LZ-rwR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yv-B7-bu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
