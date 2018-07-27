@@ -131,7 +131,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoU-q5-mJn" customClass="MenuButton" customModule="Beacon" customModuleProvider="target">
-                                <rect key="frame" x="147" y="571" width="80" height="80"/>
+                                <rect key="frame" x="154" y="571" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="SCy-Up-NPy"/>
                                     <constraint firstAttribute="height" constant="80" id="WPd-Wk-wez"/>
@@ -144,7 +144,7 @@
                             <constraint firstItem="iaa-9h-pJv" firstAttribute="leading" secondItem="Z58-4J-Xlt" secondAttribute="leading" constant="16" id="7lH-Za-x7R"/>
                             <constraint firstAttribute="bottom" secondItem="FoU-q5-mJn" secondAttribute="bottom" constant="16" id="7yP-qK-LAm"/>
                             <constraint firstItem="XVl-g2-pNS" firstAttribute="centerX" secondItem="iaa-9h-pJv" secondAttribute="centerX" id="AvX-dn-QFe"/>
-                            <constraint firstItem="FoU-q5-mJn" firstAttribute="centerX" secondItem="aAT-DJ-Bck" secondAttribute="centerX" id="Fs6-JB-IBV"/>
+                            <constraint firstItem="FoU-q5-mJn" firstAttribute="centerX" secondItem="aAT-DJ-Bck" secondAttribute="centerX" constant="6.5" id="Fs6-JB-IBV"/>
                             <constraint firstItem="Z58-4J-Xlt" firstAttribute="trailing" secondItem="XVl-g2-pNS" secondAttribute="trailing" id="IFh-mF-Ymm"/>
                             <constraint firstItem="iaa-9h-pJv" firstAttribute="top" secondItem="Z58-4J-Xlt" secondAttribute="top" constant="26" id="IV3-m0-6aX"/>
                             <constraint firstItem="Z58-4J-Xlt" firstAttribute="trailing" secondItem="iaa-9h-pJv" secondAttribute="trailing" constant="16" id="NNT-dJ-vwh"/>

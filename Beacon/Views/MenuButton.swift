@@ -18,12 +18,25 @@ class MenuButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         customizeButton()
+        
+        setupConstraints()
     }
     
     private func customizeButton() {
+        titleLabel?.removeFromSuperview()
         layer.cornerRadius = 0.5 * bounds.size.width
-        clipsToBounds = true
-        imageView?.contentMode = .scaleAspectFit
         setImage(UIImage(named: "menuButton"), for: .normal)
+        imageView?.clipsToBounds = false
+        
+        setupConstraints()
+    }
+    
+    private func setupConstraints() {
+        let leftAnchor = imageView?.leftAnchor.constraint(equalTo: self.leftAnchor)
+        let rightAnchor = imageView?.rightAnchor.constraint(equalTo: self.rightAnchor)
+        let topAnchor = imageView?.topAnchor.constraint(equalTo: self.topAnchor)
+        let bottomAnchor = imageView?.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        
+        NSLayoutConstraint.activate([leftAnchor!, rightAnchor!, topAnchor!, bottomAnchor!])
     }
 }
