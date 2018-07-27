@@ -25,12 +25,13 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
         super.viewDidLoad()
         view.backgroundColor = .ultraLightGrey
         
+        menuTableView.register(MenuCell.self, forCellReuseIdentifier: CellIdentifiers.MenuCellIdentifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        menuTableView.frame.origin.y += 400
+        menuTableView.frame.origin.y += 500
     }
     
     // MARK: - Handling touch events
@@ -38,12 +39,12 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     @IBAction func menuButtonTapped(_ sender: Any) {
         if isMenuTableViewVisible {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
-                self.menuTableView.frame.origin.y += 400
+                self.menuTableView.frame.origin.y += 500
             }, completion: nil)
             isMenuTableViewVisible = false
         } else {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
-                self.menuTableView.frame.origin.y -= 400
+                self.menuTableView.frame.origin.y -= 500
             }, completion: nil)
             isMenuTableViewVisible = true
         }
