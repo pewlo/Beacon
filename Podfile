@@ -7,6 +7,7 @@ target 'Beacon' do
 
   # Pods for Beacon
 	pod 'EstimoteIndoorSDK'
+	pod 'MaterialComponents'
 
   target 'BeaconTests' do
     inherit! :search_paths
