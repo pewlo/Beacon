@@ -23,6 +23,7 @@ class MenuButton: UIButton {
     private func customizeButton() {
         layer.cornerRadius = 0.5 * bounds.size.width
         clipsToBounds = true
+        imageView?.contentMode = .scaleAspectFit
         setImage(UIImage(named: "menuButton"), for: .normal)
     }
 }
