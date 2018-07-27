@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		516A863EC91B6192C17A44BF /* Pods_BeaconUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8FB4EE1738EB8C095701A1 /* Pods_BeaconUITests.framework */; };
+		5E6024DD4AA1386F3F300696 /* Pods_Beacon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F6FCDDA2C82D4ED62EDF5C /* Pods_Beacon.framework */; };
 		7F67D4282109C963006067B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67D4272109C963006067B3 /* Constants.swift */; };
+		7F67D46D210B1858006067B3 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67D46C210B1858006067B3 /* MenuButton.swift */; };
+		7F67D471210B1890006067B3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67D470210B1890006067B3 /* Extensions.swift */; };
 		7FB962152109AC32001E6E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB962142109AC32001E6E40 /* AppDelegate.swift */; };
 		7FB962172109AC32001E6E40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB962162109AC32001E6E40 /* ViewController.swift */; };
 		7FB9621A2109AC32001E6E40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB962182109AC32001E6E40 /* Main.storyboard */; };
@@ -16,6 +20,7 @@
 		7FB962222109AC34001E6E40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB962202109AC34001E6E40 /* LaunchScreen.storyboard */; };
 		7FB9622D2109AC34001E6E40 /* BeaconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB9622C2109AC34001E6E40 /* BeaconTests.swift */; };
 		7FB962382109AC34001E6E40 /* BeaconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB962372109AC34001E6E40 /* BeaconUITests.swift */; };
+		C900CFEEA3A138C8A4FE7B2F /* Pods_BeaconTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 066BE0439EDB0C6B643C0C03 /* Pods_BeaconTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		066BE0439EDB0C6B643C0C03 /* Pods_BeaconTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeaconTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F6FCDDA2C82D4ED62EDF5C /* Pods_Beacon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beacon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38871B3A8E3341C72E43B229 /* Pods-BeaconUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconUITests/Pods-BeaconUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7F67D41F2109C4AF006067B3 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		7F67D4272109C963006067B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7F67D46C210B1858006067B3 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		7F67D470210B1890006067B3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7FB962112109AC32001E6E40 /* Beacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB962142109AC32001E6E40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FB962162109AC32001E6E40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +62,12 @@
 		7FB962332109AC34001E6E40 /* BeaconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB962372109AC34001E6E40 /* BeaconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconUITests.swift; sourceTree = "<group>"; };
 		7FB962392109AC34001E6E40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		831A8F0BDC6FF6C184A091E1 /* Pods-Beacon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beacon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beacon/Pods-Beacon.debug.xcconfig"; sourceTree = "<group>"; };
+		90AABC6EFCC2B17C94B41C1F /* Pods-BeaconUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconUITests/Pods-BeaconUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		93395C1C9E954A4A09DFEE24 /* Pods-BeaconTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconTests/Pods-BeaconTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE8FB4EE1738EB8C095701A1 /* Pods_BeaconUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeaconUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF6E501D5FA5CA6581B7D50C /* Pods-Beacon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beacon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beacon/Pods-Beacon.release.xcconfig"; sourceTree = "<group>"; };
+		FDC0B69D4741F4BA33A245DF /* Pods-BeaconTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconTests/Pods-BeaconTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6024DD4AA1386F3F300696 /* Pods_Beacon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C900CFEEA3A138C8A4FE7B2F /* Pods_BeaconTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,12 +91,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				516A863EC91B6192C17A44BF /* Pods_BeaconUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4087855C7253E953A0164478 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37F6FCDDA2C82D4ED62EDF5C /* Pods_Beacon.framework */,
+				066BE0439EDB0C6B643C0C03 /* Pods_BeaconTests.framework */,
+				CE8FB4EE1738EB8C095701A1 /* Pods_BeaconUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7F67D4202109C878006067B3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +133,7 @@
 		7F67D4232109C89A006067B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7F67D46C210B1858006067B3 /* MenuButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				7F67D4272109C963006067B3 /* Constants.swift */,
+				7F67D470210B1890006067B3 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -139,6 +170,8 @@
 				7FB9622B2109AC34001E6E40 /* BeaconTests */,
 				7FB962362109AC34001E6E40 /* BeaconUITests */,
 				7FB962122109AC32001E6E40 /* Products */,
+				EDFF59A1AD64B2276F0DFC61 /* Pods */,
+				4087855C7253E953A0164478 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +222,19 @@
 			path = BeaconUITests;
 			sourceTree = "<group>";
 		};
+		EDFF59A1AD64B2276F0DFC61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				831A8F0BDC6FF6C184A091E1 /* Pods-Beacon.debug.xcconfig */,
+				CF6E501D5FA5CA6581B7D50C /* Pods-Beacon.release.xcconfig */,
+				FDC0B69D4741F4BA33A245DF /* Pods-BeaconTests.debug.xcconfig */,
+				93395C1C9E954A4A09DFEE24 /* Pods-BeaconTests.release.xcconfig */,
+				90AABC6EFCC2B17C94B41C1F /* Pods-BeaconUITests.debug.xcconfig */,
+				38871B3A8E3341C72E43B229 /* Pods-BeaconUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FB9623C2109AC34001E6E40 /* Build configuration list for PBXNativeTarget "Beacon" */;
 			buildPhases = (
+				6A8AAE4BCD23AAF028D2A525 /* [CP] Check Pods Manifest.lock */,
 				7FB9620D2109AC32001E6E40 /* Sources */,
 				7FB9620E2109AC32001E6E40 /* Frameworks */,
 				7FB9620F2109AC32001E6E40 /* Resources */,
+				4BBE6A349FD328BDA203034E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +261,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FB9623F2109AC34001E6E40 /* Build configuration list for PBXNativeTarget "BeaconTests" */;
 			buildPhases = (
+				04BE0C743D4968BD546D700B /* [CP] Check Pods Manifest.lock */,
 				7FB962242109AC34001E6E40 /* Sources */,
 				7FB962252109AC34001E6E40 /* Frameworks */,
 				7FB962262109AC34001E6E40 /* Resources */,
@@ -231,6 +280,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FB962422109AC34001E6E40 /* Build configuration list for PBXNativeTarget "BeaconUITests" */;
 			buildPhases = (
+				86039A16BE517D2726B42E20 /* [CP] Check Pods Manifest.lock */,
 				7FB9622F2109AC34001E6E40 /* Sources */,
 				7FB962302109AC34001E6E40 /* Frameworks */,
 				7FB962312109AC34001E6E40 /* Resources */,
@@ -320,13 +370,160 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04BE0C743D4968BD546D700B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeaconTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BBE6A349FD328BDA203034E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Beacon/Pods-Beacon-resources.sh",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/avatar.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/avatar@2x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/avatar@3x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/avatar_noarrow.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/avatar_noarrow@2x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/avatar_noarrow@3x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBeetrootSmall.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBeetrootSmall@2x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBeetrootSmall@3x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBlackSmall.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBlackSmall@2x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBlackSmall@3x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBlueberrySmall.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBlueberrySmall@2x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBlueberrySmall@3x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconCandySmall.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconCandySmall@2x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconCandySmall@3x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconGreySmall.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconGreySmall@2x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconGreySmall@3x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconIcySmall.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconIcySmall@2x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconIcySmall@3x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconLemonSmall.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconLemonSmall@2x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconLemonSmall@3x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconMintSmall.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconMintSmall@2x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconMintSmall@3x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconTransparentSmall.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconTransparentSmall@2x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconTransparentSmall@3x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconWhiteSmall.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconWhiteSmall@2x.png",
+				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconWhiteSmall@3x.png",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/avatar.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/avatar@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/avatar@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/avatar_noarrow.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/avatar_noarrow@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/avatar_noarrow@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconBeetrootSmall.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconBeetrootSmall@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconBeetrootSmall@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconBlackSmall.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconBlackSmall@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconBlackSmall@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconBlueberrySmall.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconBlueberrySmall@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconBlueberrySmall@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconCandySmall.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconCandySmall@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconCandySmall@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconGreySmall.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconGreySmall@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconGreySmall@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconIcySmall.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconIcySmall@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconIcySmall@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconLemonSmall.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconLemonSmall@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconLemonSmall@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconMintSmall.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconMintSmall@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconMintSmall@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconTransparentSmall.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconTransparentSmall@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconTransparentSmall@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconWhiteSmall.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconWhiteSmall@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/beaconWhiteSmall@3x.png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beacon/Pods-Beacon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A8AAE4BCD23AAF028D2A525 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Beacon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86039A16BE517D2726B42E20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeaconUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7FB9620D2109AC32001E6E40 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7FB9621D2109AC32001E6E40 /* Beacon.xcdatamodeld in Sources */,
+				7F67D471210B1890006067B3 /* Extensions.swift in Sources */,
 				7FB962172109AC32001E6E40 /* ViewController.swift in Sources */,
+				7F67D46D210B1858006067B3 /* MenuButton.swift in Sources */,
 				7FB962152109AC32001E6E40 /* AppDelegate.swift in Sources */,
 				7F67D4282109C963006067B3 /* Constants.swift in Sources */,
 			);
@@ -499,6 +696,7 @@
 		};
 		7FB9623D2109AC34001E6E40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 831A8F0BDC6FF6C184A091E1 /* Pods-Beacon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -518,6 +716,7 @@
 		};
 		7FB9623E2109AC34001E6E40 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF6E501D5FA5CA6581B7D50C /* Pods-Beacon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -537,6 +736,7 @@
 		};
 		7FB962402109AC34001E6E40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDC0B69D4741F4BA33A245DF /* Pods-BeaconTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -557,6 +757,7 @@
 		};
 		7FB962412109AC34001E6E40 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93395C1C9E954A4A09DFEE24 /* Pods-BeaconTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -577,6 +778,7 @@
 		};
 		7FB962432109AC34001E6E40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90AABC6EFCC2B17C94B41C1F /* Pods-BeaconUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -596,6 +798,7 @@
 		};
 		7FB962442109AC34001E6E40 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38871B3A8E3341C72E43B229 /* Pods-BeaconUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
