@@ -18,6 +18,35 @@
 		7FB962222109AC34001E6E40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB962202109AC34001E6E40 /* LaunchScreen.storyboard */; };
 		7FB9622D2109AC34001E6E40 /* BeaconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB9622C2109AC34001E6E40 /* BeaconTests.swift */; };
 		7FB962382109AC34001E6E40 /* BeaconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB962372109AC34001E6E40 /* BeaconUITests.swift */; };
+		7FE900AF210B1169000845E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE900AE210B1169000845E5 /* LoginViewController.swift */; };
+		7FE900BA210B1D1A000845E5 /* Merriweather-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900B1210B1D15000845E5 /* Merriweather-Light.otf */; };
+		7FE900BB210B1D1A000845E5 /* Merriweather-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900B2210B1D16000845E5 /* Merriweather-LightItalic.otf */; };
+		7FE900BC210B1D1A000845E5 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900B3210B1D16000845E5 /* SIL Open Font License.txt */; };
+		7FE900BD210B1D1A000845E5 /* Merriweather-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900B4210B1D17000845E5 /* Merriweather-Italic.otf */; };
+		7FE900BE210B1D1A000845E5 /* Merriweather-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900B5210B1D17000845E5 /* Merriweather-BoldItalic.otf */; };
+		7FE900BF210B1D1A000845E5 /* Merriweather-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900B6210B1D18000845E5 /* Merriweather-BlackItalic.otf */; };
+		7FE900C0210B1D1A000845E5 /* Merriweather-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900B7210B1D18000845E5 /* Merriweather-Bold.otf */; };
+		7FE900C1210B1D1A000845E5 /* Merriweather-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900B8210B1D19000845E5 /* Merriweather-Black.otf */; };
+		7FE900C2210B1D1A000845E5 /* Merriweather-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900B9210B1D19000845E5 /* Merriweather-Regular.otf */; };
+		7FE900D8210B1E77000845E5 /* librefranklin-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900C5210B1E69000845E5 /* librefranklin-light.ttf */; };
+		7FE900D9210B1E77000845E5 /* librefranklin-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900C6210B1E69000845E5 /* librefranklin-regular.ttf */; };
+		7FE900DA210B1E77000845E5 /* librefranklin-extrabolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900C7210B1E6A000845E5 /* librefranklin-extrabolditalic.ttf */; };
+		7FE900DB210B1E77000845E5 /* librefranklin-bolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900C8210B1E6A000845E5 /* librefranklin-bolditalic.ttf */; };
+		7FE900DC210B1E77000845E5 /* librefranklin-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900C9210B1E6B000845E5 /* librefranklin-italic.ttf */; };
+		7FE900DD210B1E77000845E5 /* librefranklin-thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900CA210B1E6B000845E5 /* librefranklin-thin.ttf */; };
+		7FE900DE210B1E77000845E5 /* librefranklin-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900CB210B1E6C000845E5 /* librefranklin-bold.ttf */; };
+		7FE900DF210B1E77000845E5 /* librefranklin-semibolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900CC210B1E6D000845E5 /* librefranklin-semibolditalic.ttf */; };
+		7FE900E0210B1E77000845E5 /* librefranklin-extralightitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900CD210B1E6D000845E5 /* librefranklin-extralightitalic.ttf */; };
+		7FE900E1210B1E77000845E5 /* librefranklin-semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900CE210B1E6E000845E5 /* librefranklin-semibold.ttf */; };
+		7FE900E2210B1E77000845E5 /* librefranklin-black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900CF210B1E6F000845E5 /* librefranklin-black.ttf */; };
+		7FE900E3210B1E77000845E5 /* librefranklin-lightitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900D0210B1E6F000845E5 /* librefranklin-lightitalic.ttf */; };
+		7FE900E4210B1E77000845E5 /* librefranklin-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900D1210B1E71000845E5 /* librefranklin-medium.ttf */; };
+		7FE900E5210B1E77000845E5 /* librefranklin-mediumitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900D2210B1E71000845E5 /* librefranklin-mediumitalic.ttf */; };
+		7FE900E6210B1E77000845E5 /* librefranklin-extrabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900D3210B1E72000845E5 /* librefranklin-extrabold.ttf */; };
+		7FE900E7210B1E77000845E5 /* librefranklin-thinitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900D4210B1E72000845E5 /* librefranklin-thinitalic.ttf */; };
+		7FE900E8210B1E77000845E5 /* librefranklin-blackitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900D5210B1E73000845E5 /* librefranklin-blackitalic.ttf */; };
+		7FE900E9210B1E77000845E5 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900D6210B1E73000845E5 /* SIL Open Font License.txt */; };
+		7FE900EA210B1E77000845E5 /* librefranklin-extralight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE900D7210B1E76000845E5 /* librefranklin-extralight.ttf */; };
 		F25BDF80F50010497664259D /* Pods_Beacon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312E12CF676F3F26ED627047 /* Pods_Beacon.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +90,35 @@
 		7FB962332109AC34001E6E40 /* BeaconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB962372109AC34001E6E40 /* BeaconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconUITests.swift; sourceTree = "<group>"; };
 		7FB962392109AC34001E6E40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FE900AE210B1169000845E5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7FE900B1210B1D15000845E5 /* Merriweather-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Light.otf"; sourceTree = "<group>"; };
+		7FE900B2210B1D16000845E5 /* Merriweather-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-LightItalic.otf"; sourceTree = "<group>"; };
+		7FE900B3210B1D16000845E5 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		7FE900B4210B1D17000845E5 /* Merriweather-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Italic.otf"; sourceTree = "<group>"; };
+		7FE900B5210B1D17000845E5 /* Merriweather-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-BoldItalic.otf"; sourceTree = "<group>"; };
+		7FE900B6210B1D18000845E5 /* Merriweather-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-BlackItalic.otf"; sourceTree = "<group>"; };
+		7FE900B7210B1D18000845E5 /* Merriweather-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Bold.otf"; sourceTree = "<group>"; };
+		7FE900B8210B1D19000845E5 /* Merriweather-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Black.otf"; sourceTree = "<group>"; };
+		7FE900B9210B1D19000845E5 /* Merriweather-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Regular.otf"; sourceTree = "<group>"; };
+		7FE900C5210B1E69000845E5 /* librefranklin-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-light.ttf"; sourceTree = "<group>"; };
+		7FE900C6210B1E69000845E5 /* librefranklin-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-regular.ttf"; sourceTree = "<group>"; };
+		7FE900C7210B1E6A000845E5 /* librefranklin-extrabolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-extrabolditalic.ttf"; sourceTree = "<group>"; };
+		7FE900C8210B1E6A000845E5 /* librefranklin-bolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-bolditalic.ttf"; sourceTree = "<group>"; };
+		7FE900C9210B1E6B000845E5 /* librefranklin-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-italic.ttf"; sourceTree = "<group>"; };
+		7FE900CA210B1E6B000845E5 /* librefranklin-thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-thin.ttf"; sourceTree = "<group>"; };
+		7FE900CB210B1E6C000845E5 /* librefranklin-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-bold.ttf"; sourceTree = "<group>"; };
+		7FE900CC210B1E6D000845E5 /* librefranklin-semibolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-semibolditalic.ttf"; sourceTree = "<group>"; };
+		7FE900CD210B1E6D000845E5 /* librefranklin-extralightitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-extralightitalic.ttf"; sourceTree = "<group>"; };
+		7FE900CE210B1E6E000845E5 /* librefranklin-semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-semibold.ttf"; sourceTree = "<group>"; };
+		7FE900CF210B1E6F000845E5 /* librefranklin-black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-black.ttf"; sourceTree = "<group>"; };
+		7FE900D0210B1E6F000845E5 /* librefranklin-lightitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-lightitalic.ttf"; sourceTree = "<group>"; };
+		7FE900D1210B1E71000845E5 /* librefranklin-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-medium.ttf"; sourceTree = "<group>"; };
+		7FE900D2210B1E71000845E5 /* librefranklin-mediumitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-mediumitalic.ttf"; sourceTree = "<group>"; };
+		7FE900D3210B1E72000845E5 /* librefranklin-extrabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-extrabold.ttf"; sourceTree = "<group>"; };
+		7FE900D4210B1E72000845E5 /* librefranklin-thinitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-thinitalic.ttf"; sourceTree = "<group>"; };
+		7FE900D5210B1E73000845E5 /* librefranklin-blackitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-blackitalic.ttf"; sourceTree = "<group>"; };
+		7FE900D6210B1E73000845E5 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		7FE900D7210B1E76000845E5 /* librefranklin-extralight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "librefranklin-extralight.ttf"; sourceTree = "<group>"; };
 		8C4465853515B9BCFD3417D0 /* Pods-Beacon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beacon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beacon/Pods-Beacon.release.xcconfig"; sourceTree = "<group>"; };
 		DC4FF655F7632AC77E4F992B /* Pods_BeaconTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeaconTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83DF935E26479CE20B0D604 /* Pods-BeaconTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconTests/Pods-BeaconTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				7FB962162109AC32001E6E40 /* ViewController.swift */,
+				7FE900AE210B1169000845E5 /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -182,6 +241,7 @@
 		7FB962132109AC32001E6E40 /* Beacon */ = {
 			isa = PBXGroup;
 			children = (
+				7FE900B0210B1D04000845E5 /* Fonts */,
 				7F67D41F2109C4AF006067B3 /* ObjCBridge.h */,
 				7FB9621E2109AC34001E6E40 /* Assets.xcassets */,
 				7FB962142109AC32001E6E40 /* AppDelegate.swift */,
@@ -216,6 +276,57 @@
 			path = BeaconUITests;
 			sourceTree = "<group>";
 		};
+		7FE900B0210B1D04000845E5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7FE900C4210B1E56000845E5 /* LibreFranklin */,
+				7FE900C3210B1E30000845E5 /* Merriweather */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7FE900C3210B1E30000845E5 /* Merriweather */ = {
+			isa = PBXGroup;
+			children = (
+				7FE900B3210B1D16000845E5 /* SIL Open Font License.txt */,
+				7FE900B7210B1D18000845E5 /* Merriweather-Bold.otf */,
+				7FE900B5210B1D17000845E5 /* Merriweather-BoldItalic.otf */,
+				7FE900B4210B1D17000845E5 /* Merriweather-Italic.otf */,
+				7FE900B1210B1D15000845E5 /* Merriweather-Light.otf */,
+				7FE900B2210B1D16000845E5 /* Merriweather-LightItalic.otf */,
+				7FE900B9210B1D19000845E5 /* Merriweather-Regular.otf */,
+				7FE900B8210B1D19000845E5 /* Merriweather-Black.otf */,
+				7FE900B6210B1D18000845E5 /* Merriweather-BlackItalic.otf */,
+			);
+			path = Merriweather;
+			sourceTree = "<group>";
+		};
+		7FE900C4210B1E56000845E5 /* LibreFranklin */ = {
+			isa = PBXGroup;
+			children = (
+				7FE900CF210B1E6F000845E5 /* librefranklin-black.ttf */,
+				7FE900D5210B1E73000845E5 /* librefranklin-blackitalic.ttf */,
+				7FE900CB210B1E6C000845E5 /* librefranklin-bold.ttf */,
+				7FE900C8210B1E6A000845E5 /* librefranklin-bolditalic.ttf */,
+				7FE900D3210B1E72000845E5 /* librefranklin-extrabold.ttf */,
+				7FE900C7210B1E6A000845E5 /* librefranklin-extrabolditalic.ttf */,
+				7FE900D7210B1E76000845E5 /* librefranklin-extralight.ttf */,
+				7FE900CD210B1E6D000845E5 /* librefranklin-extralightitalic.ttf */,
+				7FE900C9210B1E6B000845E5 /* librefranklin-italic.ttf */,
+				7FE900C5210B1E69000845E5 /* librefranklin-light.ttf */,
+				7FE900D0210B1E6F000845E5 /* librefranklin-lightitalic.ttf */,
+				7FE900D1210B1E71000845E5 /* librefranklin-medium.ttf */,
+				7FE900D2210B1E71000845E5 /* librefranklin-mediumitalic.ttf */,
+				7FE900C6210B1E69000845E5 /* librefranklin-regular.ttf */,
+				7FE900CE210B1E6E000845E5 /* librefranklin-semibold.ttf */,
+				7FE900CC210B1E6D000845E5 /* librefranklin-semibolditalic.ttf */,
+				7FE900CA210B1E6B000845E5 /* librefranklin-thin.ttf */,
+				7FE900D4210B1E72000845E5 /* librefranklin-thinitalic.ttf */,
+				7FE900D6210B1E73000845E5 /* SIL Open Font License.txt */,
+			);
+			path = LibreFranklin;
+			sourceTree = "<group>";
+		};
 		EFDAE2EF7B16042E24FB2BC4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +352,7 @@
 				7FB9620E2109AC32001E6E40 /* Frameworks */,
 				7FB9620F2109AC32001E6E40 /* Resources */,
 				369821145EFC93987C31165E /* [CP] Copy Pods Resources */,
+				76F8C89B263DA37123C443DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,9 +454,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FE900BF210B1D1A000845E5 /* Merriweather-BlackItalic.otf in Resources */,
+				7FE900EA210B1E77000845E5 /* librefranklin-extralight.ttf in Resources */,
+				7FE900DA210B1E77000845E5 /* librefranklin-extrabolditalic.ttf in Resources */,
+				7FE900BB210B1D1A000845E5 /* Merriweather-LightItalic.otf in Resources */,
 				7FB962222109AC34001E6E40 /* LaunchScreen.storyboard in Resources */,
+				7FE900DE210B1E77000845E5 /* librefranklin-bold.ttf in Resources */,
+				7FE900BD210B1D1A000845E5 /* Merriweather-Italic.otf in Resources */,
+				7FE900D8210B1E77000845E5 /* librefranklin-light.ttf in Resources */,
+				7FE900BA210B1D1A000845E5 /* Merriweather-Light.otf in Resources */,
+				7FE900E0210B1E77000845E5 /* librefranklin-extralightitalic.ttf in Resources */,
+				7FE900BC210B1D1A000845E5 /* SIL Open Font License.txt in Resources */,
+				7FE900E4210B1E77000845E5 /* librefranklin-medium.ttf in Resources */,
+				7FE900BE210B1D1A000845E5 /* Merriweather-BoldItalic.otf in Resources */,
+				7FE900DF210B1E77000845E5 /* librefranklin-semibolditalic.ttf in Resources */,
+				7FE900E7210B1E77000845E5 /* librefranklin-thinitalic.ttf in Resources */,
+				7FE900DD210B1E77000845E5 /* librefranklin-thin.ttf in Resources */,
+				7FE900E1210B1E77000845E5 /* librefranklin-semibold.ttf in Resources */,
+				7FE900E5210B1E77000845E5 /* librefranklin-mediumitalic.ttf in Resources */,
+				7FE900E6210B1E77000845E5 /* librefranklin-extrabold.ttf in Resources */,
+				7FE900C1210B1D1A000845E5 /* Merriweather-Black.otf in Resources */,
+				7FE900D9210B1E77000845E5 /* librefranklin-regular.ttf in Resources */,
+				7FE900C0210B1D1A000845E5 /* Merriweather-Bold.otf in Resources */,
+				7FE900E9210B1E77000845E5 /* SIL Open Font License.txt in Resources */,
+				7FE900C2210B1D1A000845E5 /* Merriweather-Regular.otf in Resources */,
 				7FB9621F2109AC34001E6E40 /* Assets.xcassets in Resources */,
+				7FE900DC210B1E77000845E5 /* librefranklin-italic.ttf in Resources */,
+				7FE900E8210B1E77000845E5 /* librefranklin-blackitalic.ttf in Resources */,
 				7FB9621A2109AC32001E6E40 /* Main.storyboard in Resources */,
+				7FE900DB210B1E77000845E5 /* librefranklin-bolditalic.ttf in Resources */,
+				7FE900E2210B1E77000845E5 /* librefranklin-black.ttf in Resources */,
+				7FE900E3210B1E77000845E5 /* librefranklin-lightitalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +611,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beacon/Pods-Beacon-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		76F8C89B263DA37123C443DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Beacon/Pods-Beacon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beacon/Pods-Beacon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		ED8E641A12F9492AC21FD1B7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -517,6 +685,7 @@
 				7FB9621D2109AC32001E6E40 /* Beacon.xcdatamodeld in Sources */,
 				7FB962172109AC32001E6E40 /* ViewController.swift in Sources */,
 				7FB962152109AC32001E6E40 /* AppDelegate.swift in Sources */,
+				7FE900AF210B1169000845E5 /* LoginViewController.swift in Sources */,
 				7F67D4282109C963006067B3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -692,13 +861,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QZ7GPNNM9G;
+				DEVELOPMENT_TEAM = 37JNZ5Q9NW;
 				INFOPLIST_FILE = Beacon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.beaconApp.rmalczynski;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beaconApp.pewlo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 				SWIFT_VERSION = 4.0;
@@ -712,13 +881,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QZ7GPNNM9G;
+				DEVELOPMENT_TEAM = 37JNZ5Q9NW;
 				INFOPLIST_FILE = Beacon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.beaconApp.rmalczynski;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beaconApp.pewlo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 				SWIFT_VERSION = 4.0;
