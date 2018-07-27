@@ -35,7 +35,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61F-bY-VRu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61F-bY-VRu">
                                 <rect key="frame" x="16" y="486.5" width="343" height="21"/>
                                 <fontDescription key="fontDescription" name="LibreFranklin-Regular" family="Libre Franklin" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -54,7 +54,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="getStarted:" destination="atl-VF-hvp" eventType="touchUpInside" id="VWk-X1-8dA"/>
+                                    <segue destination="X7i-iY-uVR" kind="show" id="PQQ-oX-T2B"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2rr-Fm-Ns3">
@@ -70,17 +70,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                        " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0x-TW-GFV" userLabel="line">
+                                <rect key="frame" x="134.5" y="304" width="106" height="1"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="CGg-gn-x1m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="2Tk-eA-q7F" firstAttribute="top" secondItem="s0x-TW-GFV" secondAttribute="bottom" constant="8.5" id="1MT-Gq-BQg"/>
                             <constraint firstItem="2rr-Fm-Ns3" firstAttribute="leading" secondItem="dui-rK-QaO" secondAttribute="leading" constant="16" id="B2C-oi-hwz"/>
+                            <constraint firstItem="s0x-TW-GFV" firstAttribute="top" secondItem="2rr-Fm-Ns3" secondAttribute="bottom" constant="6.5" id="Ipe-nZ-ckv"/>
                             <constraint firstItem="Hix-Xt-dZI" firstAttribute="top" secondItem="2Tk-eA-q7F" secondAttribute="bottom" constant="43" id="N0P-Li-Z9U"/>
                             <constraint firstItem="2Tk-eA-q7F" firstAttribute="centerX" secondItem="dui-rK-QaO" secondAttribute="centerX" id="RZj-4l-rsq"/>
                             <constraint firstItem="Hix-Xt-dZI" firstAttribute="leading" secondItem="61F-bY-VRu" secondAttribute="leading" id="THh-W9-vic"/>
+                            <constraint firstItem="s0x-TW-GFV" firstAttribute="centerX" secondItem="2rr-Fm-Ns3" secondAttribute="centerX" id="Tkk-EK-mLy"/>
                             <constraint firstItem="2Tk-eA-q7F" firstAttribute="centerY" secondItem="dui-rK-QaO" secondAttribute="centerY" id="VNm-kK-Dwb"/>
                             <constraint firstItem="61F-bY-VRu" firstAttribute="top" secondItem="Hix-Xt-dZI" secondAttribute="bottom" constant="29.5" id="WdF-cg-kvw"/>
                             <constraint firstItem="U3F-1Q-iiF" firstAttribute="leading" secondItem="dui-rK-QaO" secondAttribute="leading" constant="16" id="Wn2-1j-Gcn"/>
-                            <constraint firstItem="2Tk-eA-q7F" firstAttribute="top" secondItem="2rr-Fm-Ns3" secondAttribute="bottom" constant="16" id="Wos-YE-eNv"/>
                             <constraint firstItem="U3F-1Q-iiF" firstAttribute="top" secondItem="dui-rK-QaO" secondAttribute="top" constant="38" id="aXo-qP-w2r"/>
                             <constraint firstItem="Hix-Xt-dZI" firstAttribute="leading" secondItem="dui-rK-QaO" secondAttribute="leading" constant="16" id="e40-yc-hmf"/>
                             <constraint firstItem="dui-rK-QaO" firstAttribute="bottom" secondItem="U3F-1Q-iiF" secondAttribute="bottom" constant="549.5" id="eLL-6d-EnN"/>
@@ -93,6 +105,7 @@
                     </view>
                     <connections>
                         <outlet property="name" destination="2rr-Fm-Ns3" id="ql5-FZ-GH0"/>
+                        <outlet property="textYouCan" destination="61F-bY-VRu" id="1Ki-FU-Ztg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="stZ-lN-D2M" userLabel="First Responder" sceneMemberID="firstResponder"/>

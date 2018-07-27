@@ -11,11 +11,13 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var name: UITextField!
-    @IBAction func getStarted(_ sender: UIButton) {}
+    @IBOutlet weak var textYouCan: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         name.delegate = self
+        
+        bulletPointList()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -25,6 +27,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    func bulletPointList(){
+        
+            textYouCan.text = "• Navigate throught the office and particulare rooms\n"
+                            + "• What kitchen has to offer\n"
+                            + "• See where your coligues are\n"
+                            + "• Many other helpful clues"
+        
     }
     
 }
