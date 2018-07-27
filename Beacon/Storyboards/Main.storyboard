@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="atl-VF-hvp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Merriweather-BoldItalic.otf">
+            <string>Merriweather-BoldItalic</string>
+        </array>
+        <array key="librefranklin-extrabold.ttf">
+            <string>LibreFranklin-ExtraBold</string>
+        </array>
+        <array key="librefranklin-regular.ttf">
+            <string>LibreFranklin-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="iui-iX-Sqf">
+            <objects>
+                <viewController id="atl-VF-hvp" customClass="LoginViewController" customModule="Beacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lFl-Y5-D07">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hix-Xt-dZI">
+                                <rect key="frame" x="16" y="416.5" width="343" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Merriweather-BoldItalic" family="Merriweather" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61F-bY-VRu">
+                                <rect key="frame" x="16" y="486.5" width="343" height="21"/>
+                                <fontDescription key="fontDescription" name="LibreFranklin-Regular" family="Libre Franklin" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tk-eA-q7F">
+                                <rect key="frame" x="79.5" y="313.5" width="216" height="60"/>
+                                <color key="backgroundColor" red="0.23921568630000001" green="0.054901960780000002" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="LibreFranklin-ExtraBold" family="Libre Franklin" pointSize="26"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="14" minY="14" maxX="14" maxY="14"/>
+                                <state key="normal" title="GET STARTED"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="X7i-iY-uVR" kind="show" id="PQQ-oX-T2B"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2rr-Fm-Ns3">
+                                <rect key="frame" x="16" y="276.5" width="343" height="21"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="LibreFranklin-Regular" family="Libre Franklin" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Office Navi" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3F-1Q-iiF">
+                                <rect key="frame" x="16" y="46" width="343" height="71.5"/>
+                                <fontDescription key="fontDescription" name="Merriweather-BoldItalic" family="Merriweather" pointSize="47"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                        " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0x-TW-GFV" userLabel="line">
+                                <rect key="frame" x="134.5" y="304" width="106" height="1"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="CGg-gn-x1m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Tk-eA-q7F" firstAttribute="top" secondItem="s0x-TW-GFV" secondAttribute="bottom" constant="8.5" id="1MT-Gq-BQg"/>
+                            <constraint firstItem="2rr-Fm-Ns3" firstAttribute="leading" secondItem="dui-rK-QaO" secondAttribute="leading" constant="16" id="B2C-oi-hwz"/>
+                            <constraint firstItem="s0x-TW-GFV" firstAttribute="top" secondItem="2rr-Fm-Ns3" secondAttribute="bottom" constant="6.5" id="Ipe-nZ-ckv"/>
+                            <constraint firstItem="Hix-Xt-dZI" firstAttribute="top" secondItem="2Tk-eA-q7F" secondAttribute="bottom" constant="43" id="N0P-Li-Z9U"/>
+                            <constraint firstItem="2Tk-eA-q7F" firstAttribute="centerX" secondItem="dui-rK-QaO" secondAttribute="centerX" id="RZj-4l-rsq"/>
+                            <constraint firstItem="Hix-Xt-dZI" firstAttribute="leading" secondItem="61F-bY-VRu" secondAttribute="leading" id="THh-W9-vic"/>
+                            <constraint firstItem="s0x-TW-GFV" firstAttribute="centerX" secondItem="2rr-Fm-Ns3" secondAttribute="centerX" id="Tkk-EK-mLy"/>
+                            <constraint firstItem="2Tk-eA-q7F" firstAttribute="centerY" secondItem="dui-rK-QaO" secondAttribute="centerY" id="VNm-kK-Dwb"/>
+                            <constraint firstItem="61F-bY-VRu" firstAttribute="top" secondItem="Hix-Xt-dZI" secondAttribute="bottom" constant="29.5" id="WdF-cg-kvw"/>
+                            <constraint firstItem="U3F-1Q-iiF" firstAttribute="leading" secondItem="dui-rK-QaO" secondAttribute="leading" constant="16" id="Wn2-1j-Gcn"/>
+                            <constraint firstItem="U3F-1Q-iiF" firstAttribute="top" secondItem="dui-rK-QaO" secondAttribute="top" constant="26" id="aXo-qP-w2r"/>
+                            <constraint firstItem="Hix-Xt-dZI" firstAttribute="leading" secondItem="dui-rK-QaO" secondAttribute="leading" constant="16" id="e40-yc-hmf"/>
+                            <constraint firstItem="dui-rK-QaO" firstAttribute="bottom" secondItem="U3F-1Q-iiF" secondAttribute="bottom" constant="549.5" id="eLL-6d-EnN"/>
+                            <constraint firstItem="dui-rK-QaO" firstAttribute="trailing" secondItem="2rr-Fm-Ns3" secondAttribute="trailing" constant="16" id="grW-iZ-C4b"/>
+                            <constraint firstItem="61F-bY-VRu" firstAttribute="trailing" secondItem="Hix-Xt-dZI" secondAttribute="trailing" id="izy-YK-iOL"/>
+                            <constraint firstItem="dui-rK-QaO" firstAttribute="trailing" secondItem="Hix-Xt-dZI" secondAttribute="trailing" constant="16" id="rG0-1b-KXx"/>
+                            <constraint firstItem="dui-rK-QaO" firstAttribute="trailing" secondItem="U3F-1Q-iiF" secondAttribute="trailing" constant="16" id="tIR-uC-Rtx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dui-rK-QaO"/>
+                    </view>
+                    <connections>
+                        <outlet property="name" destination="2rr-Fm-Ns3" id="ql5-FZ-GH0"/>
+                        <outlet property="textYouCan" destination="61F-bY-VRu" id="1Ki-FU-Ztg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="stZ-lN-D2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594.39999999999998" y="116.49175412293854"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="0Ca-lJ-His">
+            <objects>
+                <viewController id="X7i-iY-uVR" customClass="MainViewController" customModule="Beacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aAT-DJ-Bck">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVl-g2-pNS">
+                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 Floor" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaa-9h-pJv">
+                                <rect key="frame" x="16" y="46" width="343" height="60"/>
+                                <fontDescription key="fontDescription" name="Merriweather-BoldItalic" family="Merriweather" pointSize="47"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoU-q5-mJn" customClass="MenuButton" customModule="Beacon" customModuleProvider="target">
+                                <rect key="frame" x="147" y="571" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="SCy-Up-NPy"/>
+                                    <constraint firstAttribute="height" constant="80" id="WPd-Wk-wez"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iaa-9h-pJv" firstAttribute="leading" secondItem="Z58-4J-Xlt" secondAttribute="leading" constant="16" id="7lH-Za-x7R"/>
+                            <constraint firstAttribute="bottom" secondItem="FoU-q5-mJn" secondAttribute="bottom" constant="16" id="7yP-qK-LAm"/>
+                            <constraint firstItem="XVl-g2-pNS" firstAttribute="centerX" secondItem="iaa-9h-pJv" secondAttribute="centerX" id="AvX-dn-QFe"/>
+                            <constraint firstItem="FoU-q5-mJn" firstAttribute="centerX" secondItem="aAT-DJ-Bck" secondAttribute="centerX" id="Fs6-JB-IBV"/>
+                            <constraint firstItem="Z58-4J-Xlt" firstAttribute="trailing" secondItem="XVl-g2-pNS" secondAttribute="trailing" id="IFh-mF-Ymm"/>
+                            <constraint firstItem="iaa-9h-pJv" firstAttribute="top" secondItem="Z58-4J-Xlt" secondAttribute="top" constant="26" id="IV3-m0-6aX"/>
+                            <constraint firstItem="Z58-4J-Xlt" firstAttribute="trailing" secondItem="iaa-9h-pJv" secondAttribute="trailing" constant="16" id="NNT-dJ-vwh"/>
+                            <constraint firstItem="XVl-g2-pNS" firstAttribute="bottom" secondItem="aAT-DJ-Bck" secondAttribute="bottom" id="TLb-uM-gfD"/>
+                            <constraint firstItem="XVl-g2-pNS" firstAttribute="top" secondItem="iaa-9h-pJv" secondAttribute="bottom" constant="8" symbolic="YES" id="e7I-eB-jIP"/>
+                            <constraint firstItem="XVl-g2-pNS" firstAttribute="leading" secondItem="aAT-DJ-Bck" secondAttribute="leading" id="ecw-aV-Huo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Z58-4J-Xlt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4yv-B7-bu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+</document>

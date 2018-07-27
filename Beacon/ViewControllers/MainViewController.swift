@@ -10,34 +10,13 @@ import UIKit
 
 
 class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
-
-    @IBOutlet weak var locationView: EILIndoorLocationView!
     
-    let locationManager = EILIndoorLocationManager()
-    var location: EILLocation!
+    @IBOutlet weak var map: EILIndoorLocationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .ultraLightGrey
         
-        locationManager.delegate = self
-        ESTConfig.setupAppID("<App ID>", andAppToken: "<App Token>")
-
-        let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "beacons room")
-        fetchLocationRequest.sendRequest { (location, error) in
-            if location != nil {
-                self.location = location!
-            } else {
-                print("can't fetch location: \(error)")
-            }
-        }
-        
-    }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        locationManager.stopPositionUpdates()
     }
 
 }
