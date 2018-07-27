@@ -65,7 +65,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Office Navi" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3F-1Q-iiF">
-                                <rect key="frame" x="16" y="46" width="343" height="71.5"/>
+                                <rect key="frame" x="16" y="46" width="343" height="59.5"/>
                                 <fontDescription key="fontDescription" name="Merriweather-BoldItalic" family="Merriweather" pointSize="47"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -95,7 +95,6 @@
                             <constraint firstItem="U3F-1Q-iiF" firstAttribute="leading" secondItem="dui-rK-QaO" secondAttribute="leading" constant="16" id="Wn2-1j-Gcn"/>
                             <constraint firstItem="U3F-1Q-iiF" firstAttribute="top" secondItem="dui-rK-QaO" secondAttribute="top" constant="26" id="aXo-qP-w2r"/>
                             <constraint firstItem="Hix-Xt-dZI" firstAttribute="leading" secondItem="dui-rK-QaO" secondAttribute="leading" constant="16" id="e40-yc-hmf"/>
-                            <constraint firstItem="dui-rK-QaO" firstAttribute="bottom" secondItem="U3F-1Q-iiF" secondAttribute="bottom" constant="549.5" id="eLL-6d-EnN"/>
                             <constraint firstItem="dui-rK-QaO" firstAttribute="trailing" secondItem="2rr-Fm-Ns3" secondAttribute="trailing" constant="16" id="grW-iZ-C4b"/>
                             <constraint firstItem="61F-bY-VRu" firstAttribute="trailing" secondItem="Hix-Xt-dZI" secondAttribute="trailing" id="izy-YK-iOL"/>
                             <constraint firstItem="dui-rK-QaO" firstAttribute="trailing" secondItem="Hix-Xt-dZI" secondAttribute="trailing" constant="16" id="rG0-1b-KXx"/>
@@ -105,7 +104,7 @@
                     </view>
                     <connections>
                         <outlet property="name" destination="2rr-Fm-Ns3" id="ql5-FZ-GH0"/>
-                        <outlet property="textYouCan" destination="61F-bY-VRu" id="1Ki-FU-Ztg"/>
+                        <outlet property="textField" destination="61F-bY-VRu" id="fFy-tJ-arD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="stZ-lN-D2M" userLabel="First Responder" sceneMemberID="firstResponder"/>

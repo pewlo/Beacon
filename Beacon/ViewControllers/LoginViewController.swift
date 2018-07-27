@@ -11,7 +11,7 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var textYouCan: UILabel!
+    @IBOutlet weak var textField: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func bulletPointList(){
         
-            textYouCan.text = "• Navigate throught the office and particulare rooms\n"
+            textField.text = "• Navigate throught the office and particulare rooms\n"
                             + "• What kitchen has to offer\n"
                             + "• See where your coligues are\n"
                             + "• Many other helpful clues"

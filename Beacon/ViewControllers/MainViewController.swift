@@ -17,6 +17,10 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
         super.viewDidLoad()
         view.backgroundColor = .ultraLightGrey
         
+        func drawObjectInBackground(){
+            
+        }
+        
     }
 
 }
