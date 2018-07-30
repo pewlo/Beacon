@@ -13,7 +13,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var textField: UILabel!
     
-    let arrayString = ["Navigate throught the office and particulare rooms",
+    let appDescription = ["Navigate throught the office and particulare rooms",
                     "What kitchen has to offer",
                     "See where your coligues are",
                     "Many other helpful clues"]
@@ -22,7 +22,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         name.delegate = self
         
-        textField.attributedText = addText(stringList: arrayString, bullet: "•")
+        textField.attributedText = addText(stringList: appDescription, bullet: Bullet.dot.rawValue)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

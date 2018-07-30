@@ -137,11 +137,11 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mg-MN-nwd" customClass="PlaceButton" customModule="Beacon" customModuleProvider="target">
+                                    <button opaque="NO" tag="998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mg-MN-nwd" customClass="PlaceButton" customModule="Beacon" customModuleProvider="target">
                                         <rect key="frame" x="305" y="503" width="54" height="34"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="placeButtonTapped:" destination="X7i-iY-uVR" eventType="touchUpInside" id="yGr-HB-wSa"/>
+                                            <action selector="tableButtonTapped:" destination="X7i-iY-uVR" eventType="touchUpInside" id="irM-Pf-yeZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -157,7 +157,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoU-q5-mJn" customClass="MenuButton" customModule="Beacon" customModuleProvider="target">
+                            <button opaque="NO" tag="997" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoU-q5-mJn" customClass="MenuButton" customModule="Beacon" customModuleProvider="target">
                                 <rect key="frame" x="154" y="571" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="SCy-Up-NPy"/>
@@ -165,7 +165,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="menuButtonTapped:" destination="X7i-iY-uVR" eventType="touchUpInside" id="TXL-tC-yWH"/>
+                                    <action selector="tableButtonTapped:" destination="X7i-iY-uVR" eventType="touchUpInside" id="Mbx-pp-JVJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -187,6 +187,7 @@
                     <connections>
                         <outlet property="menuButton" destination="FoU-q5-mJn" id="Gyx-wp-hHF"/>
                         <outlet property="menuTableView" destination="baM-nq-dME" id="M3i-LZ-rwR"/>
+                        <outlet property="placeButton" destination="1Mg-MN-nwd" id="Gpe-kv-BL6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yv-B7-bu1" userLabel="First Responder" sceneMemberID="firstResponder"/>

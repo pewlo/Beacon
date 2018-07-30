@@ -25,7 +25,7 @@ class MenuButton: UIButton {
     private func customizeButton() {
         titleLabel?.removeFromSuperview()
         layer.cornerRadius = 0.5 * bounds.size.width
-        setImage(UIImage(named: "menuButton"), for: .normal)
+        setImage(UIImage(named: ButtonName.menuButton), for: .normal)
         imageView?.clipsToBounds = false
         
         setupConstraints()

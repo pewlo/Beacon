@@ -6,11 +6,14 @@
 //  Copyright © 2018 user1. All rights reserved.
 //
 
-import Foundation
-
 struct CellIdentifiers {
     static let MenuCell = "menuCell"
     static let NavigationCell = "NavigationCell"
+}
+
+struct ButtonName {
+    static let menuButton = "menuButton"
+    static let placeButton = "placeButton"
 }
 
 enum NotificationTitle: String {
@@ -26,6 +29,10 @@ enum NotificationDesc: String {
     case hello = "Welcome back at the office"
     case kitchen = "You can try coffee, tea or just water :)"
     case floor14 = "You can find mail room and other intresting places"
+}
+
+enum Bullet: String {
+    case dot = "•"
 }
 
 

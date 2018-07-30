@@ -26,7 +26,7 @@ class PlaceButton: UIButton {
         
         private func customizeButton() {
             titleLabel?.removeFromSuperview()
-            setImage(UIImage(named: "placeButton"), for: .normal)
+            setImage(UIImage(named: ButtonName.placeButton), for: .normal)
             imageView?.clipsToBounds = false
 
         }

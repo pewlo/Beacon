@@ -16,8 +16,9 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var map: EILIndoorLocationView!
     @IBOutlet weak var menuButton: MenuButton!
+    @IBOutlet weak var placeButton: PlaceButton!
     
-    var buttonID: String = ""
+    var previousButtonTag: Int? = nil
     
     
     let center = UNUserNotificationCenter.current()
@@ -30,8 +31,8 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
         super.viewDidLoad()
         view.backgroundColor = .ultraLightGrey
         
-        menuTableView.register(UINib(nibName: "MenuCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.MenuCell)
-        menuTableView.register(UINib(nibName: "NavigationCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.NavigationCell)
+        menuTableView.register(UINib(nibName: CellIdentifiers.MenuCell, bundle: nil), forCellReuseIdentifier: CellIdentifiers.MenuCell)
+        menuTableView.register(UINib(nibName: CellIdentifiers.NavigationCell, bundle: nil), forCellReuseIdentifier: CellIdentifiers.NavigationCell)
         menuTableView.delegate = self
         menuTableView.dataSource = self
         
@@ -46,39 +47,91 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     }
     
     // MARK: - Handling touch events
-
-    @IBAction func menuButtonTapped(_ sender: Any) {
-        buttonID = "menu"
+    
+    @IBAction func tableButtonTapped(_ sender: UIButton){
         if isMenuTableViewVisible {
-            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
-                self.menuTableView.frame.origin.y += 500
-            }, completion: nil)
-            isMenuTableViewVisible = false
-            
+            switch sender.tag {
+            case menuButton.tag:
+                if sender.tag == previousButtonTag {
+                    animate(menuTableView, isVisable: true)
+                    previousButtonTag = nil
+                } else {
+                    animate(menuTableView, isVisable: true)
+                    previousButtonTag = sender.tag
+                    menuTableView.reloadData()
+                    animate(menuTableView, isVisable: false)
+                }
+            case placeButton.tag:
+                if sender.tag == previousButtonTag {
+                    animate(menuTableView, isVisable: true)
+                    previousButtonTag = nil
+                } else {
+                    animate(menuTableView, isVisable: true)
+                    previousButtonTag = sender.tag
+                    menuTableView.reloadData()
+                    animate(menuTableView, isVisable: false)
+                }
+            default:
+                print("Error")
+                
+            }
         } else {
-            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
-                self.menuTableView.frame.origin.y -= 500
-            }, completion: nil)
-            isMenuTableViewVisible = true
+            switch sender.tag {
+            case menuButton.tag:
+                previousButtonTag = sender.tag
+                isMenuTableViewVisible = true
+            case placeButton.tag:
+                previousButtonTag = sender.tag
+                isMenuTableViewVisible = true
+            default:
+                print("Error")
+                
+            }
+            animate(menuTableView, isVisable: false)
         }
-        
     }
     
-    @IBAction func placeButtonTapped(_ sender: Any) {
-        buttonID = "place"
-        menuButton.isUserInteractionEnabled = false
-        if isMenuTableViewVisible {
-            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
-                self.menuTableView.frame.origin.y += 500
+    func animate<T: UIView>(_ view: T, isVisable: Bool){
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
+            if isVisable {
+                view.frame.origin.y += 500
+            } else {
+                view.frame.origin.y -= 500
+            }
             }, completion: nil)
-            isMenuTableViewVisible = false
-        } else {
-            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
-                self.menuTableView.frame.origin.y -= 500
-            }, completion: nil)
-            isMenuTableViewVisible = true
-        }
     }
+
+    
+//    @IBAction func menuButtonTapped(_ sender: UIButton) {
+//        if isMenuTableViewVisible || buttonID == placeButton.tag {
+//            buttonID = menuButton.tag
+//            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
+//                self.menuTableView.frame.origin.y += 500
+//            }, completion: nil)
+//            isMenuTableViewVisible = false
+//        } else {
+//            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+//                self.menuTableView.frame.origin.y -= 500
+//            }, completion: nil)
+//            isMenuTableViewVisible = true
+//        }
+//
+//    }
+//
+//    @IBAction func placeButtonTapped(_ sender: Any) {
+//        menuButton.isUserInteractionEnabled = false
+//        if isMenuTableViewVisible {
+//            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
+//                self.menuTableView.frame.origin.y += 500
+//            }, completion: nil)
+//            isMenuTableViewVisible = false
+//        } else {
+//            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+//                self.menuTableView.frame.origin.y -= 500
+//            }, completion: nil)
+//            isMenuTableViewVisible = true
+//        }
+//    }
     
     func getNotification(){
         
@@ -107,7 +160,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell
-        if buttonID == "menu" {
+        if previousButtonTag == menuButton.tag {
             cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.MenuCell, for: indexPath) as! MenuCell
         }else {
             cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.NavigationCell, for: indexPath) as! NavigationCell
