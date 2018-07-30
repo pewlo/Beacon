@@ -20,8 +20,7 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     
     var previousButtonTag: Int? = nil
     
-    
-    let center = UNUserNotificationCenter.current()
+    let notificationCenter = UNUserNotificationCenter.current()
     
     var isMenuTableViewVisible = false
     
@@ -29,6 +28,16 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialSetup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        menuTableView.frame.origin.y += 500
+    }
+    
+    private func initialSetup() {
         view.backgroundColor = .ultraLightGrey
         
         menuTableView.register(UINib(nibName: CellIdentifiers.MenuCell, bundle: nil), forCellReuseIdentifier: CellIdentifiers.MenuCell)
@@ -37,13 +46,6 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
         menuTableView.dataSource = self
         
         getNotification()
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        menuTableView.frame.origin.y += 500
     }
     
     // MARK: - Handling touch events
@@ -60,6 +62,7 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
                     break
                 } else {
                     animate(menuTableView, isVisible: true) { _ in
+                        self.menuTableView.reloadData()
                         self.previousButtonTag = nil
                         self.isMenuTableViewVisible = false
                         self.animate(self.menuTableView, isVisible: false) { _ in
@@ -75,6 +78,7 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
             }
         } else {
             previousButtonTag = sender.tag
+            menuTableView.reloadData()
             animate(menuTableView, isVisible: false)
             isMenuTableViewVisible = true
         }
@@ -90,37 +94,7 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
             }, completion: completion)
     }
 
-    
-//    @IBAction func menuButtonTapped(_ sender: UIButton) {
-//        if isMenuTableViewVisible || buttonID == placeButton.tag {
-//            buttonID = menuButton.tag
-//            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
-//                self.menuTableView.frame.origin.y += 500
-//            }, completion: nil)
-//            isMenuTableViewVisible = false
-//        } else {
-//            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
-//                self.menuTableView.frame.origin.y -= 500
-//            }, completion: nil)
-//            isMenuTableViewVisible = true
-//        }
-//
-//    }
-//
-//    @IBAction func placeButtonTapped(_ sender: Any) {
-//        menuButton.isUserInteractionEnabled = false
-//        if isMenuTableViewVisible {
-//            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
-//                self.menuTableView.frame.origin.y += 500
-//            }, completion: nil)
-//            isMenuTableViewVisible = false
-//        } else {
-//            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
-//                self.menuTableView.frame.origin.y -= 500
-//            }, completion: nil)
-//            isMenuTableViewVisible = true
-//        }
-//    }
+    // MARK: - Handling notifications
     
     func getNotification(){
         
@@ -133,7 +107,7 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
         let request = UNNotificationRequest(identifier: NotificationTitle.hello.rawValue, content: content, trigger: trigger)
         
-        center.add(request, withCompletionHandler: nil)
+        notificationCenter.add(request, withCompletionHandler: nil)
     }
     
 }

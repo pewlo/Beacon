@@ -7,7 +7,7 @@
 //
 
 struct CellIdentifiers {
-    static let MenuCell = "menuCell"
+    static let MenuCell = "MenuCell"
     static let NavigationCell = "NavigationCell"
 }
 
