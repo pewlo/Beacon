@@ -21,16 +21,27 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     
     var isMenuTableViewVisible = false
     
+    let menuTableData: [[String: String]] = [
+        ["title": "Kitchen notifications",
+         "description": "See all available drinks"],
+        ["title": "Important people alert",
+         "description": "See when for example CEO is nearby"],
+        ["title": "See your friends",
+         "description": "Toggle to see where your friends are"],
+        ["title": "Work space notifications",
+         "description": "Get notified about your work area"],
+    ]
+    
     // MARK: - Controller's life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .ultraLightGrey
-
         
         menuTableView.register(UINib(nibName: "MenuCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.MenuCell)
         menuTableView.delegate = self
         menuTableView.dataSource = self
+        menuTableView.backgroundColor = .clear
         
         getNotification()
         
@@ -47,12 +58,12 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     @IBAction func menuButtonTapped(_ sender: Any) {
         if isMenuTableViewVisible {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
-                self.menuTableView.frame.origin.y += 500
+                self.menuTableView.frame.origin.y += 450
             }, completion: nil)
             isMenuTableViewVisible = false
         } else {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
-                self.menuTableView.frame.origin.y -= 500
+                self.menuTableView.frame.origin.y -= 450
             }, completion: nil)
             isMenuTableViewVisible = true
         }
@@ -75,21 +86,39 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     
 }
 
+// MARK: -
+
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return menuTableData.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.MenuCell, for: indexPath) as! MenuCell
+        
+        cell.titleLabel.text = (menuTableData[indexPath.section])["title"]
+        cell.descriptionLabel.text = (menuTableData[indexPath.section])["description"]
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 80
     }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView()
+        footerView.backgroundColor = .clear
+        return footerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    
 }
