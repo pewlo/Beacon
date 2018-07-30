@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, EILIndoorLocationManagerD
 
     var window: UIWindow?
     
+    let notificationDelegate = UYLNotificationDelegate()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let center = UNUserNotificationCenter.current()
+        center.delegate = notificationDelegate
         
         return true
     }
@@ -90,5 +95,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, EILIndoorLocationManagerD
         }
     }
 
+}
+
+class UYLNotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // Play sound and show alert to the user
+        completionHandler([.alert, .badge])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        // Determine the user action
+        switch response.actionIdentifier {
+        case UNNotificationDismissActionIdentifier:
+            print("Dismiss Action")
+        case UNNotificationDefaultActionIdentifier:
+            print("Default")
+        case "OK":
+            print("OK")
+        default:
+            print("Unknown action")
+        }
+        completionHandler()
+    }
 }
 

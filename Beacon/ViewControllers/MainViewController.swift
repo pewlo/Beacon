@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import UserNotifications
 
 class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     
@@ -16,8 +16,9 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var map: EILIndoorLocationView!
     @IBOutlet weak var menuButton: MenuButton!
+    
+    let center = UNUserNotificationCenter.current()
 
-    let eventNotificationView: EventNotificationView = EventNotificationView.fromNib()
     
     var isMenuTableViewVisible = false
     
@@ -29,7 +30,8 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
         
         menuTableView.register(MenuCell.self, forCellReuseIdentifier: CellIdentifiers.MenuCellIdentifier)
         
-        view.addSubview(eventNotificationView)
+        getNotification()
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,11 +56,19 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
         }
         
     }
-}
-
-extension UIView {
-    class func fromNib<T: UIView>() -> T {
-        return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
+    
+    func getNotification(){
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [ .alert, .sound, .badge]) { didAllow,  error in
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = NSLocalizedString(NotificationTitle.hello.rawValue, comment: "")
+        content.body = NSLocalizedString(NotificationDesc.hello.rawValue, comment: "")
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let request = UNNotificationRequest(identifier: NotificationTitle.hello.rawValue, content: content, trigger: trigger)
+    
+        center.add(request, withCompletionHandler: nil)
     }
 }
 
