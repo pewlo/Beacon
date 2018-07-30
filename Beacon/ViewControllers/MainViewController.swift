@@ -17,6 +17,9 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     @IBOutlet weak var map: EILIndoorLocationView!
     @IBOutlet weak var menuButton: MenuButton!
     
+    var buttonID: String = ""
+    
+    
     let center = UNUserNotificationCenter.current()
     
     var isMenuTableViewVisible = false
@@ -39,6 +42,7 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
         view.backgroundColor = .ultraLightGrey
         
         menuTableView.register(UINib(nibName: "MenuCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.MenuCell)
+        menuTableView.register(UINib(nibName: "NavigationCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.NavigationCell)
         menuTableView.delegate = self
         menuTableView.dataSource = self
         menuTableView.backgroundColor = .clear
@@ -56,11 +60,13 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     // MARK: - Handling touch events
 
     @IBAction func menuButtonTapped(_ sender: Any) {
+        buttonID = "menu"
         if isMenuTableViewVisible {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
                 self.menuTableView.frame.origin.y += 450
             }, completion: nil)
             isMenuTableViewVisible = false
+            
         } else {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
                 self.menuTableView.frame.origin.y -= 450
@@ -68,6 +74,22 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
             isMenuTableViewVisible = true
         }
         
+    }
+    
+    @IBAction func placeButtonTapped(_ sender: Any) {
+        buttonID = "place"
+        menuButton.isUserInteractionEnabled = false
+        if isMenuTableViewVisible {
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
+                self.menuTableView.frame.origin.y += 500
+            }, completion: nil)
+            isMenuTableViewVisible = false
+        } else {
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+                self.menuTableView.frame.origin.y -= 500
+            }, completion: nil)
+            isMenuTableViewVisible = true
+        }
     }
     
     func getNotification(){
@@ -98,11 +120,20 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+<<<<<<< HEAD
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.MenuCell, for: indexPath) as! MenuCell
         
         cell.titleLabel.text = (menuTableData[indexPath.section])["title"]
         cell.descriptionLabel.text = (menuTableData[indexPath.section])["description"]
         
+=======
+        let cell: UITableViewCell
+        if buttonID == "menu" {
+            cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.MenuCell, for: indexPath) as! MenuCell
+        }else {
+            cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.NavigationCell, for: indexPath) as! NavigationCell
+        }
+>>>>>>> ddcca10d677ec3248e0ad17b8f92394075c92734
         return cell
     }
     

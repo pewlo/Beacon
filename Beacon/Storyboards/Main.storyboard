@@ -137,8 +137,19 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mg-MN-nwd" customClass="PlaceButton" customModule="Beacon" customModuleProvider="target">
+                                        <rect key="frame" x="305" y="503" width="54" height="34"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="placeButtonTapped:" destination="X7i-iY-uVR" eventType="touchUpInside" id="yGr-HB-wSa"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1Mg-MN-nwd" secondAttribute="bottom" constant="16" id="8u0-4n-Z5G"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Mg-MN-nwd" secondAttribute="trailing" constant="16" id="QYX-fE-3Hh"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 Floor" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaa-9h-pJv">
                                 <rect key="frame" x="16" y="46" width="343" height="60"/>
