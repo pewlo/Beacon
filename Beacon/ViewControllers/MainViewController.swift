@@ -31,7 +31,6 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
         menuTableView.register(UINib(nibName: "MenuCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.MenuCell)
         menuTableView.delegate = self
         menuTableView.dataSource = self
-        menuTableView.register(MenuCell.self, forCellReuseIdentifier: CellIdentifiers.MenuCellIdentifier)
         
         view.addSubview(eventNotificationView)
     }
@@ -78,16 +77,3 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         return 100
     }
 }
-
-
-
-
-
-
-
-extension UIView {
-    class func fromNib<T: UIView>() -> T {
-        return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
-    }
-}
-
