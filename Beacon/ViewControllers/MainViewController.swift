@@ -59,7 +59,12 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     
     func getNotification(){
         
-        UNUserNotificationCenter.current().requestAuthorization(options: [ .alert, .sound, .badge]) { didAllow,  error in
+        center.requestAuthorization(options: [.alert, .badge], completionHandler: {didAllow, error in
+        })
+        
+        center.getNotificationSettings { (settings) in
+            if settings.authorizationStatus != .authorized {
+            }
         }
         
         let content = UNMutableNotificationContent()
