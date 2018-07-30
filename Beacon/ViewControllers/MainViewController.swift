@@ -16,6 +16,8 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var map: EILIndoorLocationView!
     @IBOutlet weak var menuButton: MenuButton!
+
+    let eventNotificationView: EventNotificationView = EventNotificationView.fromNib()
     
     var isMenuTableViewVisible = false
     
@@ -24,10 +26,14 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .ultraLightGrey
+
         
         menuTableView.register(UINib(nibName: "MenuCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.MenuCell)
         menuTableView.delegate = self
         menuTableView.dataSource = self
+        menuTableView.register(MenuCell.self, forCellReuseIdentifier: CellIdentifiers.MenuCellIdentifier)
+        
+        view.addSubview(eventNotificationView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,4 +84,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
 
 
+
+extension UIView {
+    class func fromNib<T: UIView>() -> T {
+        return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
+    }
+}
 
