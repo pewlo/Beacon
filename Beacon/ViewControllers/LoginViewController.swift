@@ -13,11 +13,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var textField: UILabel!
     
+    let arrayString = ["Navigate throught the office and particulare rooms",
+                    "What kitchen has to offer",
+                    "See where your coligues are",
+                    "Many other helpful clues"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         name.delegate = self
         
-        bulletPointList()
+        textField.attributedText = addText(stringList: arrayString, bullet: "•")
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -29,13 +34,31 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-    func bulletPointList(){
+    
+    func addText(stringList: [String], bullet: String, indentation: CGFloat = 5, lineSpacing: CGFloat = 2, paragraphSpacing: CGFloat = 12) -> NSAttributedString {
         
-            textField.text = "• Navigate throught the office and particulare rooms\n"
-                            + "• What kitchen has to offer\n"
-                            + "• See where your coligues are\n"
-                            + "• Many other helpful clues"
+        let paragraphStyle = NSMutableParagraphStyle()
+        let nonOptions = [NSTextTab.OptionKey: Any]()
+        paragraphStyle.tabStops = [
+            NSTextTab(textAlignment: .left, location: indentation, options: nonOptions)]
+        paragraphStyle.defaultTabInterval = indentation
+        paragraphStyle.lineSpacing = lineSpacing
+        paragraphStyle.paragraphSpacing = paragraphSpacing
+        paragraphStyle.headIndent = indentation
         
+        let bulletList = NSMutableAttributedString()
+        for string in stringList {
+            let formattedString = "\(bullet)\t\(string)\n"
+            let attributedString = NSMutableAttributedString(string: formattedString)
+            
+            attributedString.addAttributes(
+                [NSAttributedStringKey.paragraphStyle : paragraphStyle],
+                range: NSMakeRange(0, attributedString.length))
+        
+            bulletList.append(attributedString)
+        }
+        
+        return bulletList
     }
     
 }
