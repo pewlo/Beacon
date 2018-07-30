@@ -51,54 +51,43 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     @IBAction func tableButtonTapped(_ sender: UIButton){
         if isMenuTableViewVisible {
             switch sender.tag {
-            case menuButton.tag:
+            case menuButton.tag, placeButton.tag:
                 if sender.tag == previousButtonTag {
-                    animate(menuTableView, isVisable: true)
-                    previousButtonTag = nil
+                    animate(menuTableView, isVisible: true) { _ in
+                        self.previousButtonTag = nil
+                        self.isMenuTableViewVisible = false
+                    }
+                    break
                 } else {
-                    animate(menuTableView, isVisable: true)
-                    previousButtonTag = sender.tag
-                    menuTableView.reloadData()
-                    animate(menuTableView, isVisable: false)
-                }
-            case placeButton.tag:
-                if sender.tag == previousButtonTag {
-                    animate(menuTableView, isVisable: true)
-                    previousButtonTag = nil
-                } else {
-                    animate(menuTableView, isVisable: true)
-                    previousButtonTag = sender.tag
-                    menuTableView.reloadData()
-                    animate(menuTableView, isVisable: false)
+                    animate(menuTableView, isVisible: true) { _ in
+                        self.previousButtonTag = nil
+                        self.isMenuTableViewVisible = false
+                        self.animate(self.menuTableView, isVisible: false) { _ in
+                            self.isMenuTableViewVisible = true
+                            self.previousButtonTag = sender.tag
+                        }
+                    }
+                    break
                 }
             default:
                 print("Error")
                 
             }
         } else {
-            switch sender.tag {
-            case menuButton.tag:
-                previousButtonTag = sender.tag
-                isMenuTableViewVisible = true
-            case placeButton.tag:
-                previousButtonTag = sender.tag
-                isMenuTableViewVisible = true
-            default:
-                print("Error")
-                
-            }
-            animate(menuTableView, isVisable: false)
+            previousButtonTag = sender.tag
+            animate(menuTableView, isVisible: false)
+            isMenuTableViewVisible = true
         }
     }
     
-    func animate<T: UIView>(_ view: T, isVisable: Bool){
+    fileprivate func animate<T: UIView>(_ view: T, isVisible: Bool, completionHandler completion: ((Bool) -> ())? = nil ){
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
-            if isVisable {
+            if isVisible {
                 view.frame.origin.y += 500
             } else {
                 view.frame.origin.y -= 500
             }
-            }, completion: nil)
+            }, completion: completion)
     }
 
     
