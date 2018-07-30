@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import UserNotifications
 
 class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     
@@ -16,8 +16,8 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var map: EILIndoorLocationView!
     @IBOutlet weak var menuButton: MenuButton!
-
-    let eventNotificationView: EventNotificationView = EventNotificationView.fromNib()
+    
+    let center = UNUserNotificationCenter.current()
     
     var isMenuTableViewVisible = false
     
@@ -32,7 +32,8 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
         menuTableView.delegate = self
         menuTableView.dataSource = self
         
-        view.addSubview(eventNotificationView)
+        getNotification()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,6 +58,21 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
         }
         
     }
+    
+    func getNotification(){
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [ .alert, .sound, .badge]) { didAllow,  error in
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = NSLocalizedString(NotificationTitle.hello.rawValue, comment: "")
+        content.body = NSLocalizedString(NotificationDesc.hello.rawValue, comment: "")
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let request = UNNotificationRequest(identifier: NotificationTitle.hello.rawValue, content: content, trigger: trigger)
+        
+        center.add(request, withCompletionHandler: nil)
+    }
+    
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
