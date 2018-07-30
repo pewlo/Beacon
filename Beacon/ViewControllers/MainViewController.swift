@@ -25,7 +25,9 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
         super.viewDidLoad()
         view.backgroundColor = .ultraLightGrey
         
-        menuTableView.register(MenuCell.self, forCellReuseIdentifier: CellIdentifiers.MenuCellIdentifier)
+        menuTableView.register(UINib(nibName: "MenuCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.MenuCell)
+        menuTableView.delegate = self
+        menuTableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,4 +53,29 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
         
     }
 }
+
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.MenuCell, for: indexPath) as! MenuCell
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+}
+
+
+
+
+
+
 

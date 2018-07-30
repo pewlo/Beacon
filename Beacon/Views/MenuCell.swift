@@ -16,7 +16,6 @@ class MenuCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupSwitch()
     }
 
     override func awakeFromNib() {
@@ -26,13 +25,16 @@ class MenuCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
     
     private func setupSwitch() {
-        menuSwitch.onTintColor = UIColor.lightBluePurple
-        menuSwitch.thumbTintColor = UIColor.bluePurple
+        // On state
+        menuSwitch.onTintColor = .lightBluePurple
+        menuSwitch.thumbTintColor = .bluePurple
+        
+        // Off state
+        menuSwitch.tintColor = .lightBluePurple
     }
-
+    
 }

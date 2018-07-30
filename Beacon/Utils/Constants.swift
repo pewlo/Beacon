@@ -9,6 +9,6 @@
 import Foundation
 
 struct CellIdentifiers {
-    static let MenuCellIdentifier = "menuCell"
+    static let MenuCell = "menuCell"
 }
 
