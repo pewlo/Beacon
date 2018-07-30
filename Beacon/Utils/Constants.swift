@@ -10,6 +10,7 @@ import Foundation
 
 struct CellIdentifiers {
     static let MenuCell = "menuCell"
+    static let NavigationCell = "NavigationCell"
 }
 
 enum NotificationTitle: String {
