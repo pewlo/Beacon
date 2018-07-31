@@ -54,7 +54,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="X7i-iY-uVR" kind="show" id="PQQ-oX-T2B"/>
+                                    <action selector="getStarted:" destination="atl-VF-hvp" eventType="touchUpInside" id="gOj-6Q-J0m"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2rr-Fm-Ns3">
@@ -103,13 +103,15 @@
                         <viewLayoutGuide key="safeArea" id="dui-rK-QaO"/>
                     </view>
                     <connections>
+                        <outlet property="getStarted" destination="2Tk-eA-q7F" id="P0F-l4-iQR"/>
                         <outlet property="name" destination="2rr-Fm-Ns3" id="ql5-FZ-GH0"/>
                         <outlet property="textField" destination="61F-bY-VRu" id="fFy-tJ-arD"/>
+                        <segue destination="X7i-iY-uVR" kind="show" identifier="toMainView" id="OFg-ib-nUP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="stZ-lN-D2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-594.39999999999998" y="116.49175412293854"/>
+            <point key="canvasLocation" x="-650" y="116"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="0Ca-lJ-His">
