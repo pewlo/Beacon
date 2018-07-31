@@ -12,6 +12,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var textField: UILabel!
+    @IBOutlet weak var getStarted: UIButton!
     
     let appDescription = ["Navigate throught the office and particulare rooms",
                     "What kitchen has to offer",
@@ -33,6 +34,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    @IBAction func getStarted(_ sender: UIButton) {
+       if name.text != "" {
+            performSegue(withIdentifier: "toMainView", sender: self)
+        }
+    }
+    
     
     
     func addText(stringList: [String], bullet: String, indentation: CGFloat = 5, lineSpacing: CGFloat = 2, paragraphSpacing: CGFloat = 12) -> NSAttributedString {
