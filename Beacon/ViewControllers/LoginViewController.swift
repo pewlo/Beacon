@@ -36,8 +36,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func getStarted(_ sender: UIButton) {
-       if name.text != "" {
-            performSegue(withIdentifier: "toMainView", sender: self)
+        if !(name.text?.isEmpty)! {
+            performSegue(withIdentifier: StoryboardSegues.ToMainView, sender: self)
         }
     }
     

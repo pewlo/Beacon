@@ -16,6 +16,10 @@ struct ButtonName {
     static let placeButton = "placeButton"
 }
 
+struct StoryboardSegues {
+    static let ToMainView = "toMainView"
+}
+
 enum NotificationTitle: String {
     case letOffice = "You left the office :("
     case hello = "Hello again :)"
