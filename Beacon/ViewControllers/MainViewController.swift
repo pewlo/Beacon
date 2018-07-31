@@ -64,7 +64,7 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
         menuTableView.delegate = self
         menuTableView.dataSource = self
         
-        getNotification()
+//        getNotification()
     }
     
     // MARK: - Handling touch events

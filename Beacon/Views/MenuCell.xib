@@ -32,7 +32,7 @@
                         <rect key="frame" x="281" y="23" width="51" height="31"/>
                         <color key="thumbTintColor" red="0.97460808703799651" green="0.98242325280788489" blue="0.99378710985183716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </switch>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7J8-y4-eaV">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7J8-y4-eaV">
                         <rect key="frame" x="16" y="40" width="257" height="25"/>
                         <fontDescription key="fontDescription" name="LibreFranklin-Regular" family="Libre Franklin" pointSize="14"/>
                         <color key="textColor" red="0.458439638426894" green="0.46211576405876992" blue="0.46746113578680204" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
