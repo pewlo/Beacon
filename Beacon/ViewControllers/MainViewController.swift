@@ -24,6 +24,25 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
     
     var isMenuTableViewVisible = false
     
+    // MARK: - Data for TableView's DataSource
+    
+    let menuData: [[String: String]] = [
+        ["title": "Kitchen notifications",
+         "description": "See all available drinks"],
+        ["title": "Important people alert",
+         "description": "See when for example CEO is nearby"],
+        ["title": "See your friends",
+         "description": "Toggle to see where your friends are"],
+        ["title": "Work space notifications",
+         "description": "Get notified about your work area"],
+    ]
+    
+    let placeData: [[String: String]] = [
+        ["title": "Kitchen"],
+        ["title": "Printer"],
+        ["title": "Payroll department"],
+    ]
+    
     // MARK: - Controller's life cycle
     
     override func viewDidLoad() {
@@ -114,24 +133,38 @@ class MainViewController: UIViewController, EILIndoorLocationManagerDelegate {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell
         if previousButtonTag == menuButton.tag {
-            cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.MenuCell, for: indexPath) as! MenuCell
-        }else {
-            cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.NavigationCell, for: indexPath) as! NavigationCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.MenuCell, for: indexPath) as! MenuCell
+            cell.titleLabel.text = (menuData[indexPath.section])["title"]
+            cell.descriptionLabel.text = (menuData[indexPath.section])["description"]
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.NavigationCell, for: indexPath) as! NavigationCell
+            cell.placeText.text = (placeData[indexPath.section])["title"]
+            return cell
         }
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    // Managing spaces between cells
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .clear
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 8
     }
 }
